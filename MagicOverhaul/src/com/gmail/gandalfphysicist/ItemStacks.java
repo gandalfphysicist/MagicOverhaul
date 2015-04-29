@@ -131,4 +131,18 @@ public class ItemStacks {
 
         return glass1;
     }
+
+    public static ItemStack poisonBottle() {
+        ItemStack PoisonBottle = new ItemStack(Material.POTION);
+        PoisonBottle.setAmount(1);
+        PoisonBottle.setDurability((short) 8196);
+        ItemMeta PBMeta = PoisonBottle.getItemMeta();
+        PBMeta.setDisplayName("Vial of Poison");
+        ArrayList<String> PoisonBottleLore = new ArrayList<String>();
+        PoisonBottleLore.add("MagicOverhaul Ingredient");
+        PBMeta.setLore(PoisonBottleLore);
+        PoisonBottle.setItemMeta(PBMeta);
+
+        return PoisonBottle;
+    }
 }
