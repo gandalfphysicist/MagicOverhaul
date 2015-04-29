@@ -32,5 +32,6 @@ public class MagicOverhaulMain extends JavaPlugin {
         //Log Plugin Disabled
         getLogger().log(Level.INFO, ChatColor.DARK_RED + "Plugin Disabled.");
 
+        //Test
     }
 }
