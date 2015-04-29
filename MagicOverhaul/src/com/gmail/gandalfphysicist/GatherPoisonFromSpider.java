@@ -8,7 +8,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
-import com.gmail.gandalfphysicist.Utils.RemoveItemsFromInventory;
 
 import java.util.Random;
 

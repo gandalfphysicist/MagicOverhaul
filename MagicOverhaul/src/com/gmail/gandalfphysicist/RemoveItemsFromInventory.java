@@ -1,4 +1,4 @@
-package com.gmail.gandalfphysicist.Utils;
+package com.gmail.gandalfphysicist;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
