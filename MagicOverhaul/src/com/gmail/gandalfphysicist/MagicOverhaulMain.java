@@ -11,7 +11,7 @@ public class MagicOverhaulMain extends JavaPlugin {
 
     public void onEnable() {
 
-        //Command Executors !RAWR!
+        //Command Executors
 
         //Listeners
         getServer().getPluginManager().registerEvents(new ArcaneCraftingTableListener(), this);
