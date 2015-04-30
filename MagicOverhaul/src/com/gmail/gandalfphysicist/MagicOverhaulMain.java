@@ -18,6 +18,7 @@ public class MagicOverhaulMain extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new InventoryClickCancelListener(), this);
         getServer().getPluginManager().registerEvents(new MortarAndPestleGUIListener(), this);
         getServer().getPluginManager().registerEvents(new GatherPoisonFromSpider(), this);
+        getServer().getPluginManager().registerEvents(new PreventPotionUasage(), this);
 
         ShapelessRecipe MAP = new ShapelessRecipe(ItemStacks.map()).addIngredient(Material.BOWL).addIngredient(Material.STICK);
         getServer().addRecipe(MAP);
