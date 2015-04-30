@@ -1,5 +1,6 @@
 package com.gmail.gandalfphysicist;
 
+import com.gmail.gandalfphysicist.Utils.RemoveItemsFromInventory;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.CaveSpider;
