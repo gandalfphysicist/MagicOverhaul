@@ -2,13 +2,10 @@ package com.gmail.gandalfphysicist;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.inventory.FurnaceRecipe;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
+import com.gmail.gandalfphysicist.Utils.RemoveRecipes;
 
-import java.util.Iterator;
 import java.util.logging.Level;
 
 public class MagicOverhaulMain extends JavaPlugin {
@@ -26,24 +23,8 @@ public class MagicOverhaulMain extends JavaPlugin {
         getServer().addRecipe(MAP);
 
         //Disable Recipes
-        Iterator<Recipe> it = getServer().recipeIterator();
-        Recipe recipe;
-        ItemStack result;
-        Material resultType;
-        while (it.hasNext()) {
-            recipe = it.next();
-            if (recipe != null) {
-                result = recipe.getResult();
-                resultType = result.getType();
-                if (resultType.equals(Material.ENCHANTMENT_TABLE)) {
-                    it.remove();
-                }
-                if (resultType.equals(Material.INK_SACK) && result.getDurability() == 15) {
-                    it.remove();
-                }
-            }
-
-        }
+        RemoveRecipes.removeRecipes(Material.ENCHANTMENT_TABLE, 0);
+        RemoveRecipes.removeRecipes(Material.INK_SACK, 15);
     }
 
     public void onDisable() {
