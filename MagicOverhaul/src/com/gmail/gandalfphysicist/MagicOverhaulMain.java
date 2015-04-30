@@ -28,13 +28,22 @@ public class MagicOverhaulMain extends JavaPlugin {
         //Disable Enchanting Table Recipe
         Iterator<Recipe> it = getServer().recipeIterator();
         Recipe recipe;
-        while(it.hasNext()) {
+        ItemStack result;
+        Material resultType;
+        while (it.hasNext()) {
             recipe = it.next();
-            if (recipe != null && recipe.getResult().getType().equals(Material.ENCHANTMENT_TABLE)) {
-                it.remove();
+            if (recipe != null) {
+                result = recipe.getResult();
+                resultType = result.getType();
+                if (resultType.equals(Material.ENCHANTMENT_TABLE)) {
+                    it.remove();
+                }
+                if (resultType.equals(Material.INK_SACK) && result.getDurability() == 15) {
+                    it.remove();
+                }
             }
-        }
 
+        }
     }
 
     public void onDisable() {
