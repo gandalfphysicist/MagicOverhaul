@@ -3,6 +3,7 @@ package com.gmail.gandalfphysicist;
 import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
 import com.gmail.gandalfphysicist.Utils.ToolClasses;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,7 +23,7 @@ public class EntityAddWeaponEffect implements Listener {
             if (event.getEntity() instanceof LivingEntity) {
                 Player user = (Player) event.getDamager();
                 LivingEntity le = (LivingEntity) event.getEntity();
-                if (!(user.getItemInHand() == null)) {
+                if ((user.getItemInHand() != null) && (!user.getItemInHand().getType().equals(Material.AIR))) {
                     if (user.getItemInHand().getItemMeta().hasLore()) {
                         ItemStack itemInHand = user.getItemInHand();
                         List<String> lore = itemInHand.getItemMeta().getLore();
@@ -30,8 +31,7 @@ public class EntityAddWeaponEffect implements Listener {
                             if (CustomEffectCheck.getEffect(lore).equalsIgnoreCase(ChatColor.DARK_PURPLE + "Poison")) {
                                 if (ToolClasses.axes().contains(itemInHand.getType()) || (ToolClasses.swords().contains(itemInHand.getType()))) {
                                     int level = CustomEffectCheck.getEffectLevel(lore);
-                                    user.sendMessage(ChatColor.GREEN + "Effect level is " + level);
-                                    le.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 45 * 20 / level, level, false));
+                                    le.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 45 * 20 / level, level - 1, false));
                                 }
                             } else {
                                 user.sendMessage("Weapon has no effect imbued.");
