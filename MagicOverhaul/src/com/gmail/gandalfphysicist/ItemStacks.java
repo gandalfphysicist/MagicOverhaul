@@ -132,7 +132,7 @@ public class ItemStacks {
         return glass1;
     }
 
-    public static ItemStack poisonBottle() {
+    public static ItemStack poisonVial() {
         ItemStack PoisonBottle = new ItemStack(Material.POTION);
         PoisonBottle.setAmount(1);
         PoisonBottle.setDurability((short) 8196);
