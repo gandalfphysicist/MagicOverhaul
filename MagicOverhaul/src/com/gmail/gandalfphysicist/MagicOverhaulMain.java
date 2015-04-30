@@ -25,7 +25,7 @@ public class MagicOverhaulMain extends JavaPlugin {
         ShapelessRecipe MAP = new ShapelessRecipe(ItemStacks.map()).addIngredient(Material.BOWL).addIngredient(Material.STICK);
         getServer().addRecipe(MAP);
 
-        //Disable Enchanting Table Recipe
+        //Disable Recipes
         Iterator<Recipe> it = getServer().recipeIterator();
         Recipe recipe;
         ItemStack result;
