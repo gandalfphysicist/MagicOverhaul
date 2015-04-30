@@ -1,6 +1,0 @@
-name: MagicOverhaul
-main: com.gmail.gandalfphysicist.MagicOverhaulMain
-version: Hartnell
-commands:
-    moeffect:
-        usage: /<command>
