@@ -1,8 +1,8 @@
 package com.gmail.gandalfphysicist.WeaponEffects;
 
+import com.gmail.gandalfphysicist.Utils.ToolClasses;
 import com.gmail.gandalfphysicist.Utils.RomanNumerals;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -13,18 +13,7 @@ import java.util.List;
 public class Poison {
 
     public static ItemStack addPoison(ItemStack is, int level, Player user) {
-        ArrayList<Material> allowedList = new ArrayList<Material>();
-        allowedList.add(Material.WOOD_AXE);
-        allowedList.add(Material.STONE_AXE);
-        allowedList.add(Material.GOLD_AXE);
-        allowedList.add(Material.IRON_AXE);
-        allowedList.add(Material.DIAMOND_AXE);
-        allowedList.add(Material.WOOD_SWORD);
-        allowedList.add(Material.STONE_SWORD);
-        allowedList.add(Material.GOLD_SWORD);
-        allowedList.add(Material.IRON_SWORD);
-        allowedList.add(Material.DIAMOND_SWORD);
-        if (allowedList.contains(is.getType())) {
+       if (ToolClasses.axes().contains(is.getType()) || (ToolClasses.swords().contains(is.getType()))) {
             ItemMeta meta = is.getItemMeta();
             List<String> lore = meta.getLore();
             if (lore == null || lore.isEmpty()) {

@@ -1,6 +1,7 @@
 package com.gmail.gandalfphysicist;
 
-import com.gmail.gandalfphysicist.WeaponEffects.Poison;
+import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
+import com.gmail.gandalfphysicist.WeaponEffects.AddEffect;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -8,6 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.List;
 import java.util.UUID;
 
 public class MOEffectCommand implements CommandExecutor {
@@ -38,17 +40,18 @@ public class MOEffectCommand implements CommandExecutor {
                     user.sendMessage(ChatColor.DARK_RED + "Syntax is /moeffect <effect> <level>");
                     return true;
                 }
-                if (args[0].equalsIgnoreCase("poison")) {
-                    if (i > 0 && i < 3) {
-                        Poison.addPoison(user.getItemInHand(), i, user);
+                if (user.getItemInHand().getItemMeta().hasLore()) {
+                    List<String> lore = user.getItemInHand().getItemMeta().getLore();
+                    if (!CustomEffectCheck.hasCustomEffect(lore)) {
+                        AddEffect.applyEffect(user, args[0], i);
+                    } else {
+                        user.sendMessage(ChatColor.DARK_RED + "This tool already has an effect.");
+                        return true;
                     }
-                } else {
-                    user.sendMessage(ChatColor.DARK_RED + "No such effect.");
                 }
+                AddEffect.applyEffect(user, args[0], i);
             }
-
         }
         return true;
     }
-
 }

@@ -1,10 +1,10 @@
 package com.gmail.gandalfphysicist;
 
+import com.gmail.gandalfphysicist.Utils.RemoveRecipes;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.gmail.gandalfphysicist.Utils.RemoveRecipes;
 
 import java.util.logging.Level;
 
@@ -18,6 +18,7 @@ public class MagicOverhaulMain extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new MortarAndPestleGUIListener(), this);
         getServer().getPluginManager().registerEvents(new GatherPoisonFromSpider(), this);
         getServer().getPluginManager().registerEvents(new PreventPotionUasage(), this);
+        getServer().getPluginManager().registerEvents(new EntityAddWeaponEffect(), this);
 
         //Commands
         getCommand("moeffect").setExecutor(new MOEffectCommand(this));
