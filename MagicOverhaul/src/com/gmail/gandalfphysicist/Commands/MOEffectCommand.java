@@ -1,9 +1,8 @@
 package com.gmail.gandalfphysicist.Commands;
 
-import com.gmail.gandalfphysicist.MagicOverhaulMain;
-import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
-import com.gmail.gandalfphysicist.Utils.ItemStacks;
-import com.gmail.gandalfphysicist.WeaponEffects.AddEffect;
+import java.util.List;
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -11,8 +10,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.List;
-import java.util.UUID;
+import com.gmail.gandalfphysicist.MagicOverhaulMain;
+import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
+import com.gmail.gandalfphysicist.WeaponEffects.AddEffect;
 
 public class MOEffectCommand implements CommandExecutor {
 

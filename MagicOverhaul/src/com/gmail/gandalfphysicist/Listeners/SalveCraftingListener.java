@@ -22,9 +22,6 @@ public class SalveCraftingListener implements Listener {
         Inventory inventory = event.getInventory();
         ItemStack item = event.getCurrentItem();
         ItemStack cursor = event.getCursor();
-        // 14
-        // 15
-        // 16
         ItemMeta mcursor = cursor.getItemMeta();
         ArrayList<String> Lore = new ArrayList<String>();
         Lore.add("MagicOverhaul GUI");
@@ -42,6 +39,28 @@ public class SalveCraftingListener implements Listener {
                     			}
                     			mcursor.setLore(Lore);
                     			inventory.getItem(14).setItemMeta(mcursor);
+                    		}else{
+                    			if(inventory.getItem(15).equals(ItemStacks.glass1())) {
+                        			inventory.setItem(15, cursor);
+                        			if(cursor.getAmount() > 1) {
+                        				cursor.setAmount(cursor.getAmount() - 1);
+                        			}else{
+                        			event.getView().setCursor(null);
+                        			}
+                        			mcursor.setLore(Lore);
+                        			inventory.getItem(15).setItemMeta(mcursor);
+                    			}else{
+                    				if(inventory.getItem(16).equals(ItemStacks.glass1())) {
+                            			inventory.setItem(16, cursor);
+                            			if(cursor.getAmount() > 1) {
+                            				cursor.setAmount(cursor.getAmount() - 1);
+                            			}else{
+                            			event.getView().setCursor(null);
+                            			}
+                            			mcursor.setLore(Lore);
+                            			inventory.getItem(16).setItemMeta(mcursor);
+                    				}
+                    			}
                     		}
                     	}
                     }

@@ -1,12 +1,8 @@
 package com.gmail.gandalfphysicist.Listeners;
 
-import com.gmail.gandalfphysicist.MagicOverhaulMain;
-import com.gmail.gandalfphysicist.Utils.ItemStacks;
-import com.gmail.gandalfphysicist.Utils.RemoveItemsFromInventory;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,6 +13,10 @@ import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.util.Vector;
+
+import com.gmail.gandalfphysicist.MagicOverhaulMain;
+import com.gmail.gandalfphysicist.Utils.ItemStacks;
+import com.gmail.gandalfphysicist.Utils.RemoveItemsFromInventory;
 
 public class CreateSplashPotions implements Listener {
 
