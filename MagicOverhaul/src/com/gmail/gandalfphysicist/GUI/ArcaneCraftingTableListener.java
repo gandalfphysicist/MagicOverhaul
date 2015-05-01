@@ -1,4 +1,4 @@
-package com.gmail.gandalfphysicist.GUI.copy;
+package com.gmail.gandalfphysicist.GUI;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
