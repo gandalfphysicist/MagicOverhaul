@@ -5,8 +5,21 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SalveitemList {
+
+    public static List<ItemStack> salveitemList() {
+        ArrayList<ItemStack> items = new ArrayList<ItemStack>();
+        items.add(SalveitemList.fireSalts());
+        items.add(SalveitemList.ghastTear());
+        items.add(SalveitemList.glisteningMelon());
+        items.add(SalveitemList.goldDust());
+        items.add(SalveitemList.magmaCream());
+        items.add(SalveitemList.slimeBall());
+
+        return items;
+    }
 
     public static ItemStack glisteningMelon() {
         ItemStack melon = new ItemStack(Material.SPECKLED_MELON);
