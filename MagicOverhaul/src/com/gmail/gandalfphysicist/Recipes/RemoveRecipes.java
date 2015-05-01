@@ -1,4 +1,4 @@
-package com.gmail.gandalfphysicist.Utils;
+package com.gmail.gandalfphysicist.Recipes;
 
 import com.gmail.gandalfphysicist.MagicOverhaulMain;
 import org.bukkit.Bukkit;

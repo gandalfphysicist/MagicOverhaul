@@ -1,4 +1,4 @@
-package com.gmail.gandalfphysicist;
+package com.gmail.gandalfphysicist.Listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

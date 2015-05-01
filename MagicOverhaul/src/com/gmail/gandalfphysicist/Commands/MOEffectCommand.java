@@ -1,5 +1,6 @@
-package com.gmail.gandalfphysicist;
+package com.gmail.gandalfphysicist.Commands;
 
+import com.gmail.gandalfphysicist.MagicOverhaulMain;
 import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
 import com.gmail.gandalfphysicist.WeaponEffects.AddEffect;
 import org.bukkit.Bukkit;

@@ -1,12 +1,11 @@
 package com.gmail.gandalfphysicist;
 
-import com.gmail.gandalfphysicist.GUI.ArcaneCraftingTableListener;
-import com.gmail.gandalfphysicist.GUI.MortarAndPestleGUIListener;
-import com.gmail.gandalfphysicist.Utils.RemoveRecipes;
-
+import com.gmail.gandalfphysicist.Commands.RegisterCommands;
+import com.gmail.gandalfphysicist.Events.RegisterEvents;
+import com.gmail.gandalfphysicist.Recipes.ClearRecipes;
+import com.gmail.gandalfphysicist.Recipes.DisableRecipes;
+import com.gmail.gandalfphysicist.Recipes.RegisterRecipes;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
@@ -16,34 +15,29 @@ public class MagicOverhaulMain extends JavaPlugin {
     public void onEnable() {
 
         //Listeners
-        getServer().getPluginManager().registerEvents(new ArcaneCraftingTableListener(), this);
-        getServer().getPluginManager().registerEvents(new InventoryClickCancelListener(), this);
-        getServer().getPluginManager().registerEvents(new MortarAndPestleGUIListener(), this);
-        getServer().getPluginManager().registerEvents(new GatherPoisonFromSpider(), this);
-        getServer().getPluginManager().registerEvents(new PreventPotionUasage(), this);
-        getServer().getPluginManager().registerEvents(new EntityAddWeaponEffect(), this);
-        getServer().getPluginManager().registerEvents(new SalveCraftingListener(), this);
-        getServer().getPluginManager().registerEvents(new MortarAndPestleUseListener(), this);
+        RegisterEvents re = new RegisterEvents(this);
+        re.registerEvents();
 
         //Commands
-        getCommand("moeffect").setExecutor(new MOEffectCommand(this));
+        RegisterCommands rc = new RegisterCommands(this);
+        rc.registerCommands();
 
-        ShapelessRecipe MAP = new ShapelessRecipe(ItemStacks.map()).addIngredient(Material.BOWL).addIngredient(Material.STICK);
-        getServer().addRecipe(MAP);
+        //Add new Recipes
+        RegisterRecipes rr = new RegisterRecipes(this);
+        rr.registerRecipes();
 
         //Disable Recipes
-        RemoveRecipes.removeRecipes(Material.ENCHANTMENT_TABLE, 0);
-        RemoveRecipes.removeRecipes(Material.INK_SACK, 15);
+        DisableRecipes dr = new DisableRecipes(this);
+        dr.disableRecipes();
     }
 
     public void onDisable() {
 
         //Unregister Recipes
-        getServer().clearRecipes();
+        ClearRecipes cr = new ClearRecipes(this);
+        cr.clearRecipes();
 
         //Log Plugin Disabled
         getLogger().log(Level.INFO, ChatColor.DARK_RED + "Plugin Disabled.");
-
-        //Test
     }
 }

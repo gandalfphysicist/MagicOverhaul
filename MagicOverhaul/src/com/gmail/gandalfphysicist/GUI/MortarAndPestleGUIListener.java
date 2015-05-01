@@ -11,7 +11,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import com.gmail.gandalfphysicist.ItemStacks;
+import com.gmail.gandalfphysicist.Utils.ItemStacks;
 
 public class MortarAndPestleGUIListener implements Listener {
 
