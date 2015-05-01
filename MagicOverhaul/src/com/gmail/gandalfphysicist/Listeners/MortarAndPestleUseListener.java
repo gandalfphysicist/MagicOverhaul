@@ -18,7 +18,8 @@ public class MortarAndPestleUseListener implements Listener {
 		if(inventory.getName().contains(ChatColor.DARK_GREEN + "Mortar and Pestle")) {
 			if(item != null) {
 				if(item.equals(ItemStacks.pestle())) {
-				}
+                    event.setCancelled(true);
+                }
 			}
 		}
 	}
