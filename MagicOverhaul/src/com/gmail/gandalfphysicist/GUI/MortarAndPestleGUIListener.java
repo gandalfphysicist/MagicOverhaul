@@ -1,4 +1,4 @@
-package com.gmail.gandalfphysicist;
+package com.gmail.gandalfphysicist.GUI;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -10,6 +10,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+
+import com.gmail.gandalfphysicist.ItemStacks;
 
 public class MortarAndPestleGUIListener implements Listener {
 

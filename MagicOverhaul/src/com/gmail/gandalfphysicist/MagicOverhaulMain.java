@@ -1,6 +1,9 @@
 package com.gmail.gandalfphysicist;
 
+import com.gmail.gandalfphysicist.GUI.ArcaneCraftingTableListener;
+import com.gmail.gandalfphysicist.GUI.MortarAndPestleGUIListener;
 import com.gmail.gandalfphysicist.Utils.RemoveRecipes;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ShapelessRecipe;
