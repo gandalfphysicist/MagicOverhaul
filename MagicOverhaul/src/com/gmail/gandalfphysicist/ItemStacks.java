@@ -81,6 +81,18 @@ public class ItemStacks {
 
         return andesite;
     }
+    
+    public static ItemStack diorite() {
+    	 ItemStack diorite = new ItemStack(Material.STONE, 1, (short) 4);
+         ItemMeta mdiorite = diorite.getItemMeta();
+         mdiorite.setDisplayName(" ");
+         ArrayList<String> dioriteLore = new ArrayList<String>();
+         dioriteLore.add("MagicOverhaul GUI");
+         mdiorite.setLore(dioriteLore);
+         diorite.setItemMeta(mdiorite);
+
+         return diorite;
+    }
 
     public static ItemStack planks() {
         ItemStack planks = new ItemStack(Material.WOOD, 1, (short) 1);

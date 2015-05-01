@@ -22,7 +22,7 @@ public class SalveCraftingListener implements Listener {
 			if(item != null) {
 				if(item.equals(ItemStacks.glass())) {
 					if(cursor.getType() != Material.AIR) {
-						cursor.setType(Material.WATER);
+						
 					}
 				}
 			}

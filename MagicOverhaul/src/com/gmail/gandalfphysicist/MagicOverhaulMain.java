@@ -20,6 +20,7 @@ public class MagicOverhaulMain extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PreventPotionUasage(), this);
         getServer().getPluginManager().registerEvents(new EntityAddWeaponEffect(), this);
         getServer().getPluginManager().registerEvents(new SalveCraftingListener(), this);
+        getServer().getPluginManager().registerEvents(new MortarAndPestleUseListener(), this);
 
         //Commands
         getCommand("moeffect").setExecutor(new MOEffectCommand(this));
