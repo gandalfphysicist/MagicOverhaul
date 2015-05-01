@@ -26,6 +26,7 @@ public class RegisterEvents implements Listener{
         pm.registerEvents(new EntityAddWeaponEffect(), plugin);
         pm.registerEvents(new SalveCraftingListener(), plugin);
         pm.registerEvents(new MortarAndPestleUseListener(), plugin);
+        pm.registerEvents(new CreateSplashPotions(plugin), plugin);
 
     }
 

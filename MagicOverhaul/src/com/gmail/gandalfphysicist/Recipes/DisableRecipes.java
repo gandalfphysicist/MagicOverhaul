@@ -14,6 +14,7 @@ public class DisableRecipes {
 
         RemoveRecipes.removeRecipes(Material.ENCHANTMENT_TABLE, 0);
         RemoveRecipes.removeRecipes(Material.INK_SACK, 15);
+        RemoveRecipes.removeRecipes(Material.BREWING_STAND_ITEM, 0);
 
     }
 

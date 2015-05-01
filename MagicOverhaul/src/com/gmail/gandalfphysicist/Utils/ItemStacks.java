@@ -4,6 +4,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 
@@ -156,5 +158,11 @@ public class ItemStacks {
         PoisonBottle.setItemMeta(PBMeta);
 
         return PoisonBottle;
+    }
+
+    public static ItemStack heal2Potion() {
+        ItemStack potion = new ItemStack(Material.POTION, 1,(short) 8229);
+
+        return potion;
     }
 }

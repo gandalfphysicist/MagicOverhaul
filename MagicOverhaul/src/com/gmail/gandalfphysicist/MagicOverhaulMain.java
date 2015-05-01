@@ -2,6 +2,7 @@ package com.gmail.gandalfphysicist;
 
 import com.gmail.gandalfphysicist.Commands.RegisterCommands;
 import com.gmail.gandalfphysicist.Events.RegisterEvents;
+import com.gmail.gandalfphysicist.Listeners.CreateSplashPotions;
 import com.gmail.gandalfphysicist.Recipes.ClearRecipes;
 import com.gmail.gandalfphysicist.Recipes.DisableRecipes;
 import com.gmail.gandalfphysicist.Recipes.RegisterRecipes;
@@ -24,7 +25,8 @@ public class MagicOverhaulMain extends JavaPlugin {
 
         //Add new Recipes
         RegisterRecipes rr = new RegisterRecipes(this);
-        rr.registerRecipes();
+        rr.registerShapelessRecipes();
+        rr.registerFurnaceRecipes();
 
         //Disable Recipes
         DisableRecipes dr = new DisableRecipes(this);

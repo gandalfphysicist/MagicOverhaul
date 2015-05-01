@@ -3,4 +3,8 @@ main: com.gmail.gandalfphysicist.MagicOverhaulMain
 version: Hartnell
 commands:
     moeffect:
+        description: Add effect to the tool you are holding.
+        usage: /<command>
+    data:
+        description: Returns data on item you are holding.
         usage: /<command>
