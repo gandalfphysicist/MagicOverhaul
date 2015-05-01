@@ -9,6 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import com.gmail.gandalfphysicist.RecipeLists.CheckSalveitemList;
 
@@ -23,6 +24,7 @@ public class SalveCraftingListener implements Listener {
         // 14
         // 15
         // 16
+        ItemMeta mcursor = cursor.getItemMeta();
         ArrayList<String> Lore = new ArrayList<String>();
         Lore.add("MagicOverhaul GUI");
         if (inventory.getName().contains(ChatColor.DARK_AQUA + "Salve Crafting")) {
@@ -31,9 +33,14 @@ public class SalveCraftingListener implements Listener {
                     if (cursor.getType() != Material.AIR) {
                     	if(CheckSalveitemList.checkList(cursor)) {
                     		if(inventory.getItem(14).equals(ItemStacks.glass1())) {
-                    			cursor.getItemMeta().setLore(Lore);
                     			inventory.setItem(14, cursor);
+                    			if(cursor.getAmount() > 1) {
+                    				cursor.setAmount(cursor.getAmount() - 1);
+                    			}else{
                     			event.getView().setCursor(null);
+                    			}
+                    			mcursor.setLore(Lore);
+                    			inventory.getItem(14).setItemMeta(mcursor);
                     		}
                     	}
                     }
