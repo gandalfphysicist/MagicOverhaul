@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class PreventPotionUasage implements Listener {
+public class PreventPotionUsage implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {

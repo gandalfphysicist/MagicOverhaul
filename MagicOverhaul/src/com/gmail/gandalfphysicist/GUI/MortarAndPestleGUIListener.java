@@ -66,7 +66,9 @@ public class MortarAndPestleGUIListener implements Listener {
 
         if (action.equals(Action.RIGHT_CLICK_AIR) || action.equals(Action.RIGHT_CLICK_BLOCK)) {
             if (user.getInventory().getItemInHand().equals(ItemStacks.map()) && user.hasPermission("MagicOverhaul.mortarandpestle")) {
-                user.openInventory(MaP);
+            	if(user.getItemInHand().getAmount() == 1) {
+            		user.openInventory(MaP);
+            	}
             }
         }
     }

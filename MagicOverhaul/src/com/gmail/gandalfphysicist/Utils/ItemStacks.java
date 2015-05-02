@@ -163,4 +163,40 @@ public class ItemStacks {
 
         return potion;
     }
+    
+    public static ItemStack clear() {
+    	ItemStack clear = new ItemStack(Material.BOWL);
+    	ItemMeta mclear = clear.getItemMeta();
+    	mclear.setDisplayName(ChatColor.DARK_RED + "Clear Contents");
+    	ArrayList<String> clearLore = new ArrayList<String>();
+    	clearLore.add("MagicOverhaul GUI");
+    	mclear.setLore(clearLore);
+    	clear.setItemMeta(mclear);
+    	
+    	return clear;
+    }
+    
+    public static ItemStack mix() {
+    	ItemStack mix = new ItemStack(Material.STICK);
+    	ItemMeta mmix = mix.getItemMeta();
+    	mmix.setDisplayName(ChatColor.BLUE + "Mix Salve");
+    	ArrayList<String> mixLore = new ArrayList<String>();
+    	mixLore.add("MagicOverhaul GUI");
+    	mmix.setLore(mixLore);
+    	mix.setItemMeta(mmix);
+    	
+    	return mix;
+    }
+    
+    public static ItemStack wool() {
+    	ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 5);
+    	ItemMeta mwool = wool.getItemMeta();
+    	mwool.setDisplayName(ChatColor.DARK_GREEN + "Continue Crafting");
+    	ArrayList<String> woolLore = new ArrayList<String>();
+    	woolLore.add("MagicOverhaul GUI");
+    	mwool.setLore(woolLore);
+    	wool.setItemMeta(mwool);
+    	
+    	return wool;
+    }
 }

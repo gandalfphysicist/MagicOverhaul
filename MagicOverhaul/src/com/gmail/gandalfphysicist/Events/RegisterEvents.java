@@ -24,11 +24,13 @@ public class RegisterEvents implements Listener{
         pm.registerEvents(new InventoryClickCancelListener(), plugin);
         pm.registerEvents(new MortarAndPestleGUIListener(), plugin);
         pm.registerEvents(new GatherPoisonFromSpider(), plugin);
-        pm.registerEvents(new PreventPotionUasage(), plugin);
+        pm.registerEvents(new PreventPotionUsage(), plugin);
         pm.registerEvents(new EntityAddWeaponEffect(), plugin);
         pm.registerEvents(new SalveCraftingListener(), plugin);
         pm.registerEvents(new MortarAndPestleUseListener(), plugin);
         pm.registerEvents(new MortarAndPestleSalveCompleteGUIListener(), plugin);
+        pm.registerEvents(new MortarAndPestleSalveCompleteInventoryClickListener(), plugin);
+        pm.registerEvents(new SalveCraftingInventoryCloseListener(), plugin);
         pm.registerEvents(new CreateSplashPotions(plugin), plugin);
 
     }
