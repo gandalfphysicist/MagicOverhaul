@@ -1,13 +1,11 @@
 package com.gmail.gandalfphysicist.Utils;
 
+import java.util.ArrayList;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.metadata.FixedMetadataValue;
-import org.bukkit.plugin.Plugin;
-
-import java.util.ArrayList;
 
 public class ItemStacks {
 
@@ -164,5 +162,41 @@ public class ItemStacks {
         ItemStack potion = new ItemStack(Material.POTION, 1,(short) 8229);
 
         return potion;
+    }
+    
+    public static ItemStack clear() {
+    	ItemStack clear = new ItemStack(Material.BOWL);
+    	ItemMeta mclear = clear.getItemMeta();
+    	mclear.setDisplayName(ChatColor.DARK_RED + "Clear Contents");
+    	ArrayList<String> clearLore = new ArrayList<String>();
+    	clearLore.add("MagicOverhaul GUI");
+    	mclear.setLore(clearLore);
+    	clear.setItemMeta(mclear);
+    	
+    	return clear;
+    }
+    
+    public static ItemStack mix() {
+    	ItemStack mix = new ItemStack(Material.STICK);
+    	ItemMeta mmix = mix.getItemMeta();
+    	mmix.setDisplayName(ChatColor.BLUE + "Mix Salve");
+    	ArrayList<String> mixLore = new ArrayList<String>();
+    	mixLore.add("MagicOverhaul GUI");
+    	mmix.setLore(mixLore);
+    	mix.setItemMeta(mmix);
+    	
+    	return mix;
+    }
+    
+    public static ItemStack wool() {
+    	ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 5);
+    	ItemMeta mwool = wool.getItemMeta();
+    	mwool.setDisplayName(ChatColor.DARK_GREEN + "Continue Crafting");
+    	ArrayList<String> woolLore = new ArrayList<String>();
+    	woolLore.add("MagicOverhaul GUI");
+    	mwool.setLore(woolLore);
+    	wool.setItemMeta(mwool);
+    	
+    	return wool;
     }
 }

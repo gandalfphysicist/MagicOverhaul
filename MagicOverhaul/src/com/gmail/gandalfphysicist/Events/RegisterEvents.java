@@ -3,7 +3,9 @@ package com.gmail.gandalfphysicist.Events;
 import com.gmail.gandalfphysicist.*;
 import com.gmail.gandalfphysicist.GUI.ArcaneCraftingTableListener;
 import com.gmail.gandalfphysicist.GUI.MortarAndPestleGUIListener;
+import com.gmail.gandalfphysicist.GUI.MortarAndPestleSalveCompleteGUIListener;
 import com.gmail.gandalfphysicist.Listeners.*;
+
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 
@@ -22,10 +24,13 @@ public class RegisterEvents implements Listener{
         pm.registerEvents(new InventoryClickCancelListener(), plugin);
         pm.registerEvents(new MortarAndPestleGUIListener(), plugin);
         pm.registerEvents(new GatherPoisonFromSpider(), plugin);
-        pm.registerEvents(new PreventPotionUasage(), plugin);
+        pm.registerEvents(new PreventPotionUsage(), plugin);
         pm.registerEvents(new EntityAddWeaponEffect(), plugin);
         pm.registerEvents(new SalveCraftingListener(), plugin);
         pm.registerEvents(new MortarAndPestleUseListener(), plugin);
+        pm.registerEvents(new MortarAndPestleSalveCompleteGUIListener(), plugin);
+        pm.registerEvents(new MortarAndPestleSalveCompleteInventoryClickListener(), plugin);
+        pm.registerEvents(new SalveCraftingInventoryCloseListener(), plugin);
         pm.registerEvents(new CreateSplashPotions(plugin), plugin);
 
     }
