@@ -163,40 +163,56 @@ public class ItemStacks {
 
         return potion;
     }
-    
+
+    public static ItemStack alchemicalFlame() {
+        ItemStack flame = new ItemStack(Material.BLAZE_POWDER, 1);
+        ItemMeta meta = flame.getItemMeta();
+        meta.setDisplayName(ChatColor.RED + "Alchemical Flame");
+        ArrayList<String> lore = new ArrayList<String>();
+        lore.add("Right click on a furnace to");
+        lore.add("allow creation of splash potions.");
+        lore.add(" ");
+        lore.add("MagicalOverhaul");
+        meta.setLore(lore);
+        flame.setItemMeta(meta);
+
+        return flame;
+    }
+
     public static ItemStack clear() {
-    	ItemStack clear = new ItemStack(Material.BOWL);
-    	ItemMeta mclear = clear.getItemMeta();
-    	mclear.setDisplayName(ChatColor.DARK_RED + "Clear Contents");
-    	ArrayList<String> clearLore = new ArrayList<String>();
-    	clearLore.add("MagicOverhaul GUI");
-    	mclear.setLore(clearLore);
-    	clear.setItemMeta(mclear);
-    	
-    	return clear;
+        ItemStack clear = new ItemStack(Material.BOWL);
+        ItemMeta mclear = clear.getItemMeta();
+        mclear.setDisplayName(ChatColor.DARK_RED + "Clear Contents");
+        ArrayList<String> clearLore = new ArrayList<String>();
+        clearLore.add("MagicOverhaul GUI");
+        mclear.setLore(clearLore);
+        clear.setItemMeta(mclear);
+
+        return clear;
     }
-    
+
     public static ItemStack mix() {
-    	ItemStack mix = new ItemStack(Material.STICK);
-    	ItemMeta mmix = mix.getItemMeta();
-    	mmix.setDisplayName(ChatColor.BLUE + "Mix Salve");
-    	ArrayList<String> mixLore = new ArrayList<String>();
-    	mixLore.add("MagicOverhaul GUI");
-    	mmix.setLore(mixLore);
-    	mix.setItemMeta(mmix);
-    	
-    	return mix;
+        ItemStack mix = new ItemStack(Material.STICK);
+        ItemMeta mmix = mix.getItemMeta();
+        mmix.setDisplayName(ChatColor.BLUE + "Mix Salve");
+        ArrayList<String> mixLore = new ArrayList<String>();
+        mixLore.add("MagicOverhaul GUI");
+        mmix.setLore(mixLore);
+        mix.setItemMeta(mmix);
+
+        return mix;
     }
-    
+
     public static ItemStack wool() {
-    	ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 5);
-    	ItemMeta mwool = wool.getItemMeta();
-    	mwool.setDisplayName(ChatColor.DARK_GREEN + "Continue Crafting");
-    	ArrayList<String> woolLore = new ArrayList<String>();
-    	woolLore.add("MagicOverhaul GUI");
-    	mwool.setLore(woolLore);
-    	wool.setItemMeta(mwool);
-    	
-    	return wool;
+        ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 5);
+        ItemMeta mwool = wool.getItemMeta();
+        mwool.setDisplayName(ChatColor.DARK_GREEN + "Continue Crafting");
+        ArrayList<String> woolLore = new ArrayList<String>();
+        woolLore.add("MagicOverhaul GUI");
+        mwool.setLore(woolLore);
+        wool.setItemMeta(mwool);
+
+        return wool;
     }
+
 }
