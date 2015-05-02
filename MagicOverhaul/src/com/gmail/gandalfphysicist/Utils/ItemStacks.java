@@ -169,7 +169,7 @@ public class ItemStacks {
         ItemMeta meta = flame.getItemMeta();
         meta.setDisplayName(ChatColor.RED + "Alchemical Flame");
         ArrayList<String> lore = new ArrayList<String>();
-        lore.add("Right click on a furnace to");
+        lore.add("Shift+Right click on a furnace to");
         lore.add("allow creation of splash potions.");
         lore.add(" ");
         lore.add("MagicalOverhaul");

@@ -26,7 +26,7 @@ public class GatherPoisonFromSpider implements Listener {
                     int rt = r.nextInt(10) + 1;
                     if (rt == 1) {
                         if (Damager.getInventory().contains(Material.GLASS_BOTTLE)) {
-                            RemoveItemsFromInventory.removeInventoryItems(Damager.getInventory(), Material.GLASS_BOTTLE, 1);
+                            RemoveItemsFromInventory.removeInventoryItems(Damager.getInventory(), Material.GLASS_BOTTLE, 1, (short) 0);
                             World world = Damager.getWorld();
                             world.dropItem(Damager.getLocation(), ItemStacks.poisonVial());
                         }
