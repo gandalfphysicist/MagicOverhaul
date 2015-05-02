@@ -22,8 +22,8 @@ public class MortarAndPestleSalveCompleteInventoryClickListener implements Liste
 		
 		if(inventory.getName().contains(ChatColor.BLUE + "Complete Salve")) {
 			if(item != null) {
-				if(item.equals(ItemStacks.clear())) {
-					if(user.getItemInHand().getAmount() == 1) {
+				if(user.getItemInHand().getAmount() == 1) {
+					if(item.equals(ItemStacks.clear())) {
 						user.getInventory().remove(user.getItemInHand());
 						user.getInventory().setItemInHand(ItemStacks.map());
 						user.closeInventory();

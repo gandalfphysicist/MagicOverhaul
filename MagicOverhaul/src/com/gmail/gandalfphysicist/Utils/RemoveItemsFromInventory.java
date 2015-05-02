@@ -1,7 +1,6 @@
 package com.gmail.gandalfphysicist.Utils;
 
 import org.bukkit.Material;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
