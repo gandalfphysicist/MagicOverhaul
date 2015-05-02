@@ -7,7 +7,7 @@ public class CheckSalveitemList {
     public static boolean checkList(ItemStack is) {
 
         for (ItemStack s : SalveitemList.salveitemList()) {
-            if (is.equals(s)) {
+            if (is.isSimilar(s)) {
                 return true;
             }
         }
