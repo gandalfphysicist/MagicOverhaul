@@ -1,7 +1,8 @@
 package com.gmail.gandalfphysicist.Listeners;
 
-import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
+import com.gmail.gandalfphysicist.WeaponEffects.CustomEffectCheck;
 import com.gmail.gandalfphysicist.Utils.ToolClasses;
+import com.gmail.gandalfphysicist.WeaponEffects.RemoveEffect;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.LivingEntity;
@@ -32,6 +33,7 @@ public class EntityAddWeaponEffect implements Listener {
                                 if (ToolClasses.axes().contains(itemInHand.getType()) || (ToolClasses.swords().contains(itemInHand.getType()))) {
                                     int level = CustomEffectCheck.getEffectLevel(lore);
                                     le.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 45 * 20 / level, level - 1, false));
+                                    user.setItemInHand(RemoveEffect.removeEffect(itemInHand));
                                 }
                             } else {
                                 user.sendMessage("Weapon has no effect imbued.");
@@ -41,6 +43,5 @@ public class EntityAddWeaponEffect implements Listener {
                 }
             }
         }
-
     }
 }

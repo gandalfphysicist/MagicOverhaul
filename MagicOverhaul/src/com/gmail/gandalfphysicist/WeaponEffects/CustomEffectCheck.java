@@ -1,6 +1,6 @@
-package com.gmail.gandalfphysicist.Utils;
+package com.gmail.gandalfphysicist.WeaponEffects;
 
-import com.gmail.gandalfphysicist.WeaponEffects.EffectList;
+import com.gmail.gandalfphysicist.Utils.RomanNumerals;
 
 import java.util.List;
 

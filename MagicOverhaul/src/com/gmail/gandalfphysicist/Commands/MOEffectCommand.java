@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.gmail.gandalfphysicist.MagicOverhaulMain;
-import com.gmail.gandalfphysicist.Utils.CustomEffectCheck;
+import com.gmail.gandalfphysicist.WeaponEffects.CustomEffectCheck;
 import com.gmail.gandalfphysicist.WeaponEffects.AddEffect;
 
 public class MOEffectCommand implements CommandExecutor {
